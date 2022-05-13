@@ -6,5 +6,10 @@
 </head>
 <body>
     <h1>인공지능</h1>
+    {% for p in posts %}
+        <h2>{{ p.title }}</h2>
+        <h3>{{ p.content }}</h3>
+        <h4>{{ p.created_at }}</h4>
+    {% endfor %}
 </body>
 </html>

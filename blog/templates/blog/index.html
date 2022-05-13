@@ -5,11 +5,15 @@
     <title>Blog</title>
 </head>
 <body>
+    <nav>
+        <a href="/">홈으로</a>
+    </nav>
+
     <h1>인공지능</h1>
     {% for p in posts %}
-        <h2>{{ p.title }}</h2>
-        <h3>{{ p.content }}</h3>
-        <h4>{{ p.created_at }}</h4>
+        <h2><a href ={{p.get_absolute_url}}>{{ p.title }}</a></h2>
+<!--        <h3>{{ p.content }}</h3>-->
+<!--        <h4>{{ p.created_at }}</h4>-->
     {% endfor %}
 </body>
 </html>
